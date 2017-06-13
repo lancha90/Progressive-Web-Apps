@@ -1,0 +1,78 @@
+html,
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.toScroll {
+  height: 1000px;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.imgContain {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+.imgContain:after,
+.imgContain:before {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.imgContain:after {
+  content: "\a";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.imgContain:before {
+  content: attr(data-content);
+  width: 100%;
+  color: #fff;
+  z-index: 1;
+  bottom: 0;
+  padding: 4px 10px;
+  text-align: center;
+  top: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.imgContain:hover img {
+  transform: scale(1.1);
+}
+
+.imgContain:hover:after img,
+.imgContain:hover:before img {
+  transform: scale(1.1);
+}
+
+.no-gutter {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+/*# sourceMappingURL=style.css.map */
